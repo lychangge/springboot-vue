@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jianshen?useUnicode=true&characterEncoding=utf8&useSSL=false
+    password: 123456
+    username: root
+  #邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 1040583375@qq.com
+    password: nvtlgdloiqoebeid
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  redis:
+    database: 0
+    host: 127.0.0.1
+mybatis:
+  typeAliasesPackage: com.js.pojo
+  mapper-locations: classpath:mapper/*Mapper.xml
