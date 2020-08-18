@@ -3,10 +3,14 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/jianshen
+    url: jdbc:mysql://192.168.136.128:3306/jianshen
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: MWL19981002
+    password: mwl19981002
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
 mybatis:
   type-aliases-package: com.js.pojo
   mapper-locations: classpath:mapper/*Mapper.xml
