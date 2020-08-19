@@ -7,4 +7,21 @@
     <select id="getAllCoach" resultType="Coach">
         select * from coach
     </select>
+
+    <select id="getCoachByCid" resultType="Coach">
+        select * from coach where coach_id = #{coach_id}
+    </select>
+
+    <select id="savaCoach">
+        insert into coach values (default , #{cname}, #{sex}, #{age}, #{tel}, #{detail}, #{imgurl})
+    </select>
+
+    <select id="updateCoach">
+        update coach set cname = #{cname}, sex =#{sex}, age =#{age}, tel=#{tel}, detail=#{detail}, imgurl=#{imgurl} where coach_id = #{coach_id}
+    </select>
+
+    <select id="deleteCoachByCid">
+        delete from coach where coach_id = #{coach_id}
+    </select>
+
 </mapper>

@@ -7,4 +7,12 @@ import java.util.List;
 public interface CoachService {
 
     List<Coach> getAllCoach();
+
+    Coach getCoachByCid(Integer coach_id);
+
+    Integer saveCoach(Coach coach);
+
+    Integer updateCoach(Coach coach);
+
+    Integer deleteCoachByCid(Integer coach_id);
 }

@@ -15,4 +15,24 @@ public class CoachServiceImpl implements CoachService {
     public List<Coach> getAllCoach() {
         return coachDao.getAllCoach();
     }
+
+    @Override
+    public Coach getCoachByCid(Integer coach_id) {
+        return coachDao.getCoachByCid(coach_id);
+    }
+
+    @Override
+    public Integer saveCoach(Coach coach) {
+        return coachDao.savaCoach(coach);
+    }
+
+    @Override
+    public Integer updateCoach(Coach coach) {
+        return coachDao.updateCoach(coach);
+    }
+
+    @Override
+    public Integer deleteCoachByCid(Integer coach_id) {
+        return coachDao.deleteCoachByCid(coach_id);
+    }
 }

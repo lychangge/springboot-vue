@@ -8,4 +8,6 @@ public interface UserDao {
     User UserRegistry(User user);
 
     Integer add(User user);
+
+    User userlogin(String tel, String password);
 }

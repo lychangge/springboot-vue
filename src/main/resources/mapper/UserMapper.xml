@@ -4,12 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-<mapper namespace="com.js.dao.IUserDao">
+<mapper namespace="com.js.dao.UserDao">
 
     <select id="userlogin" resultType="User">
     select * from user where tel= #{tel} and password=#{password}
     </select>
-<mapper namespace="com.js.dao.UserDao">
 
     <select id="registry" resultType="User">
     select * from user where tel=#{tel} and password=#{password}
