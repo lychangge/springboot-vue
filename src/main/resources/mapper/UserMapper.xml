@@ -9,4 +9,12 @@
     <select id="userlogin" resultType="User">
     select * from user where tel= #{tel} and password=#{password}
     </select>
+<mapper namespace="com.js.dao.UserDao">
+
+    <select id="registry" resultType="User">
+    select * from user where tel=#{tel} and password=#{password}
+  </select>
+    <select id="add">
+   insert into user values(#{tel},#{password},#(age),#{sex},#{email},#{realname})
+  </select>
 </mapper>
