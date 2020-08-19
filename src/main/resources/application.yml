@@ -11,4 +11,4 @@ spring:
 mybatis:
   type-aliases-package: com.js.pojo
   mapper-locations: classpath:mapper/*Mapper.xml
-  mapper-locations: classpath:mapper/*.xml
+

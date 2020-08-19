@@ -23,18 +23,4 @@ public class UserServiceImpl implements IUserService {
         return userDao.userlogin(tel,password);
     }
 }
-public class UserServiceImpl implements UserService {
 
-    @Resource
-    private UserDao userDao;
-
-    @Override
-    public User UserRegistry(User user) {
-        return userDao.UserRegistry(user);
-    }
-
-    @Override
-    public Integer add(User user) {
-        return userDao.add(user);
-    }
-}
