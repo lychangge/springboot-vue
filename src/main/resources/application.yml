@@ -1,0 +1,13 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://196.168.136.128:3306/jianshen
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: mwl19981002
+mybatis:
+  type-aliases-package: com.js.pojo
+  mapper-locations: classpath:mapper/*Mapper.xml
