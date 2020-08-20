@@ -1,8 +1,11 @@
 package com.js.service.impl;
 
 
-import com.js.dao.UserDao;
+//import com.js.dao.IUserDao;
 import com.js.pojo.User;
+//import com.js.service.IUserService;
+import com.js.dao.UserDao;
+//import com.js.pojo.User;
 import com.js.service.UserService;
 import org.springframework.stereotype.Service;
 
