@@ -26,7 +26,7 @@ public class EmailServiceImpl implements EmailService {
         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
         simpleMailMessage.setFrom(sendName);
         simpleMailMessage.setTo(mail);
-        simpleMailMessage.setSubject("验证码发送");
+
         simpleMailMessage.setText("1234");
         try {
             javaMailSender.send(simpleMailMessage);
@@ -34,6 +34,7 @@ public class EmailServiceImpl implements EmailService {
             redisTemplate.expire(mail,180, TimeUnit.SECONDS);
             return 1;
         }catch (Exception e){
+            System.out.println(e.getMessage());
             return 0;
         }
     }

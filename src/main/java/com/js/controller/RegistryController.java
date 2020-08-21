@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
+
 
 @RestController
 public class RegistryController {
@@ -17,14 +18,13 @@ public class RegistryController {
     private UserService userService;
 
     @RequestMapping("/UserRegistry")
-    public Integer UserRegistry(HttpServletRequest request,User user){
+    public String UserRegistry(User user){
         User u =userService.UserRegistry(user);
-        if(u==null){
-         int res = userService.add(user);
-            return 1;
-        }else {
-            return 0;
+            if (u == null){
+                userService.add(user);
+                return "success";
         }
-
+        return "fail";
     }
+
 }
