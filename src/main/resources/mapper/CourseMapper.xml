@@ -6,4 +6,24 @@
         <select id="getAllCourseD" resultType="com.js.pojo.Course">
             select * from course
         </select>
+
+        <select id="findCourseOne" resultType="com.js.pojo.Course">
+           select * from course where course_id = #{course_id}
+        </select>
+
+        <update id="updateCourse">
+           UPDATE course SET
+            course_name=#{course_name},starttime=#{starttime},times=#{endtime},caddress=#{caddress},cprice=#{cprice},number=#{number}
+            WHERE course_id = #{course_id}
+        </update>
+
+        <insert id="addCourse" >
+            INSERT INTO
+            course(course_id,course_name,starttime,times,caddress,cprice,number)
+            VALUES(NULL,#{course_name},#{starttime},#{endtime},#{caddress},#{cprice},#{number})
+        </insert>
+
+        <delete id="deleteCourseOne">
+            delete from course where course_id = #{course_id}
+        </delete>
 </mapper>
